@@ -1,0 +1,10 @@
+services:
+  mumble:
+    build: .
+    container_name: mumble
+    restart: unless-stopped
+    volumes:
+      - ./data:/etc/murmur
+    ports:
+      - "64738:64738/tcp"
+      - "64738:64738/udp"
